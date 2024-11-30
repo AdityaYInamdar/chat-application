@@ -1,0 +1,221 @@
+/* @import "~antd/dist/antd.compact.css"; */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ant-card .ant-card-head {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 20px;
+  margin-bottom: -1px;
+  padding: 0 5px;
+  color: rgb(145 135 135 / 88%);
+  font-weight: 600;
+  font-size: 12px;
+  background: transparent;
+  border-bottom: 1pxsolid #f0f0f0;
+  border-radius: 8px 8px 0 0;
+}
+
+.ant-card .ant-card-body {
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+}
+/* @import '~antd/dist/antd.css'; */
+
+:root {
+    --navbarHeight: 50px;
+    --sidebarOpenWidth: 200px;
+    --sidebarClosedWidth: 0px;
+    --sidebarFooterHeight: 25px;
+
+    --navbarBackground: #18232d;
+    --navbarColor: #fff;
+
+    --sidebarBackground: #000;
+    --sidebarTextColor: #ffffff;
+    --sidebarBorder: #cfcfcf;
+
+    --contentBackground: #fff;
+
+    --infoBgColor: #e6f7ff;
+    --infoBorderColor: #91d5ff;
+    --infoTextColor: #1890ff;
+
+    --successBgColor: #f6ffed;
+    --successBorderColor: #b7eb8f;
+    --successTextColor: #52c41a;
+
+    --warningBgColor: #fffbe6;
+    --warningBorderColor: #ffe58f;
+    --warningTextColor: #faad14;
+
+    --errorBgColor: #fff1f0;
+    --errorBorderColor: #ffa39e;
+    --errorTextColor: #f5222d;
+
+    --contentBackground: #fff;
+    --contentText: #18232d;
+    --contentAccent: #f60057;
+    /* --backdropBackground: rgba(0, 0, 0, 0.5); */
+    --backdropBackground: var(--navbarBackground);
+    --backdropTextColor: var(--contentAccent);
+    --backdropTextBakground: var(--contentBackground);
+    --backdropAccent: var(--contentAccent);
+
+    --backdropInfoText: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.login-outer-div {
+    height: 48rem;
+    display: grid;
+    text-align: center;
+    /* flex-direction: column; */
+    justify-content: left;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #7a7a7a;
+    border-radius: 20px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+.sidebar-component {
+    height: 100vh;
+    overflow-y: auto;
+    background-color: var(--sidebarBackground);
+    color: var(--sidebarTextColor);
+    border-right: 1px solid var(--sidebarBorder);
+    /* Add shadow to the sidebar */
+    /* box-shadow: 0px 0px 5px 0px #111; */
+}
+
+.ant-layout-header {
+  height: 64px;
+  padding: 0 10px;
+  color: rgba(0, 0, 0, 0.88);
+  line-height: 64px;
+  background: #001529;
+}
+
+.sidebar-top-logo {
+    /* border-right: 1px solid var(--sidebarTextColor); */
+    border-bottom: 1px solid var(--sidebarBorder);
+    height: var(--navbarHeight);
+    line-height: var(--navbarHeight);
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+}
+
+.sidebar-content {
+    height: calc(100vh - var(--navbarHeight) - var(--sidebarFooterHeight) - 5px);
+    overflow: auto;
+    /* padding-bottom: 100px; */
+    overflow-x: hidden;
+}
+
+.sidebar-footer {
+    border-top: 1px solid #e8e8e8;
+    height: var(--sidebarFooterHeight);
+    line-height: var(--sidebarFooterHeight);
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+}
+
+.main-content-div {
+    width: 100%;
+    padding: 0px 3px;
+    background-color: var(--contentBackground);
+    height: calc(100vh - var(--navbarHeight));
+    overflow: auto;
+}
+
+.navbar-component {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    /* Add bottom shadow */
+    box-shadow: 0px -15px 10px -15px #111;
+}
+
+.navbar-page-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#navbar-portal {
+    /* background-color: rgba(255, 0, 0, 0.411); */
+    /* width: 100%; */
+    padding: 0px 10px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
